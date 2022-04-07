@@ -2,7 +2,7 @@
   "name": "food-order",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nk412k.github.io/Food-Order-Web-App/",
+  "homepage": "https://nk412k.github.io/Food-Ordering-Web-App/",
   "dependencies": {
     "-": "^0.0.1",
     "@testing-library/jest-dom": "^5.16.3",
