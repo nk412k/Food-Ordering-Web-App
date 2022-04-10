@@ -1,8 +1,8 @@
 import { useRef,useState } from "react";
 import classes from "./Checkout.module.css";
 
-const isEmpty= data => data.trim()==='';
-const isValidPostal=data=> data.length===6;
+const isEmpty= (data) => data.trim()==='';
+const isValidPostal=(data)=> data.trim().length===6;
 
 const Checkout = (props) => {
   const nameRef = useRef();
@@ -35,9 +35,10 @@ const Checkout = (props) => {
         street:enteredStreetIsValid,
         city:enteredCityIsValid,
         postalCode:enteredPostalCodeIsValid,
-    })
-
-    if(!formInputsValidity){
+    });
+    const formIsValid=enteredNameIsValid && enteredCityIsValid && enteredPostalCodeIsValid && enteredStreetIsValid;
+    if(!formIsValid){
+      console.log(formIsValid);
         return;
     }
     props.onConfirm({
